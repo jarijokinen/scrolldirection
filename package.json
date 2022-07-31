@@ -1,7 +1,7 @@
 {
   "name": "@jarijokinen/scrolldirection",
-  "version": "0.0.1",
-  "description": "Scroll direction detection",
+  "version": "0.0.2",
+  "description": "A zero-dependency, vanilla JavaScript library for detecting scroll direction.",
   "main": "src/scrolldirection.js",
   "repository": {
     "type": "git",
