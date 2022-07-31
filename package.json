@@ -1,0 +1,16 @@
+{
+  "name": "@jarijokinen/scrolldirection",
+  "version": "0.0.1",
+  "description": "Scroll direction detection",
+  "main": "src/scrolldirection.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarijokinen/scrolldirection.git"
+  },
+  "author": "Jari Jokinen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jarijokinen/scrolldirection/issues"
+  },
+  "homepage": "https://github.com/jarijokinen/scrolldirection#readme"
+}
