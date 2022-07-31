@@ -48,5 +48,5 @@ Hiding a navigation bar with CSS when scrolling down:
 ## License
 
 MIT License. Copyright (c) 2022 [Jari Jokinen](https://jarijokinen.com).  See
-[LICENSE](https://github.com/jarijokinen/scrolldirection/blob/master/LICENSE.txt)
+[LICENSE](https://github.com/jarijokinen/scrolldirection/blob/main/LICENSE.txt)
 for further details.
