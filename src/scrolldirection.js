@@ -4,10 +4,12 @@ export const scrolldirection = (options) => {
     dataAttribute: 'data-scroll-direction',
     dataValueUp: 'up',
     dataValueDown: 'down',
-    throttleTimeout: 250,
+    dataUpdateInterval: 250,
+    throttleInterval: 250,
     ...options
   };
   
+  let tid = 0;
   let yprev = window.pageYOffset;
 
   const throttle = (callback, timeout) => {
@@ -25,10 +27,16 @@ export const scrolldirection = (options) => {
     const y = window.pageYOffset;
 
     if (y > yprev) {
-      opts.dataElement.setAttribute(opts.dataAttribute, opts.dataValueDown);
+      clearTimeout(tid);
+      tid = setTimeout(() => {
+        opts.dataElement.setAttribute(opts.dataAttribute, opts.dataValueDown);
+      }, opts.dataUpdateInterval);
     }
     else if (y < yprev) {
-      opts.dataElement.setAttribute(opts.dataAttribute, opts.dataValueUp);
+      clearTimeout(tid);
+      tid = setTimeout(() => {
+        opts.dataElement.setAttribute(opts.dataAttribute, opts.dataValueUp);
+      }, opts.dataUpdateInterval);
     }
 
     yprev = Math.min(
@@ -37,5 +45,5 @@ export const scrolldirection = (options) => {
     );
   };
 
-  window.addEventListener('scroll', throttle(handler, opts.throttleTimeout));
+  window.addEventListener('scroll', throttle(handler, opts.throttleInterval));
 };

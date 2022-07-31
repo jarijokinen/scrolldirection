@@ -28,11 +28,12 @@ Yarn:
 ## Configuration
 
     const options = {
-      dataElement: document.querySelector('html'),
-      dataAttribute: 'data-scroll-direction',
-      dataValueUp: 'up',
-      dataValueDown: 'down',
-      throttleTimeout: 250
+      dataElement: document.querySelector('html'), // element for data attribute
+      dataAttribute: 'data-scroll-direction',      // data attribute name
+      dataValueUp: 'up',                           // attribute value for up
+      dataValueDown: 'down',                       // attribute value for down
+      dataUpdateInterval: 250,                     // attribute update interval
+      throttleInterval: 250                        // throttle interval
     };
 
     scrolldirection(options);
